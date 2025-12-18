@@ -1,1 +1,67 @@
-# snort3-ibr
+
+### Analyzing Internet Background Radiation (IBR) using Snort 3 IDS.
+
+**Project:** Evaluation of Snort as a Mechanism to Categorize Internet Background Radiation  
+**Author:** Kim André V. Heggelund  
+**Institution:** Noroff University College  
+**Period:** 2025/26
+
+## Quick Start
+```bash
+# 1. Add rules tarball (requires free registration)
+#    Download from: https://www.snort.org/downloads
+
+# 2. Run setup
+chmod +x setup.sh run_analysis.sh
+./setup.sh
+
+# 3. Add PCAP files to pcaps/
+
+# 4. Run analysis
+./run_analysis.sh
+```
+
+## Output
+generates `output/<timestamp>/summary.txt`:
+```
+=== IBR Alert Summary ===
+
+=== Alerts by Rule (SID) ===
+ 666570    29456   PROTOCOL-ICMP Unusual PING detected
+ 665572    384     PROTOCOL-ICMP PING
+   9586    1417    PROTOCOL-SNMP request udp
+    ...
+
+=== Alerts by Classification ===
+1316824 Misc activity
+ 666570 Information Leak
+  46692 Attempted Information Leak
+    ...
+```
+
+## Directory Structure
+```
+snort3-ibr/
+├── Dockerfile
+├── compose.yml
+├── setup.sh
+├── run_analysis.sh
+├── README.md
+├── BUILD_DOCUMENTATION.md
+├── snortrules-snapshot-XXXXX.tar.gz   (add this)
+├── rules/                             (extracted by setup.sh)
+├── pcaps/                             (your PCAP files)
+└── output/                            (results)
+```
+
+## Versions
+- **Snort:** 3.10.0.0
+- **LibDAQ:** 3.0.23
+- **Base Image:** Ubuntu 22.04
+
+## References
+- https://github.com/snort3/snort3
+- https://docs.snort.org/start/installation
+- https://www.snort.org/downloads
+
+See `BUILD_DOCUMENTATION.md` for complete build documentation.
