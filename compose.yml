@@ -1,0 +1,18 @@
+# Docker Compose for Snort 3 IBR Analysis
+services:
+  snort:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: snort3-ibr:3.10.0.0
+    volumes:
+      # Mount rules into Snort's default rules directory inside the image
+      - ./rules:/usr/local/etc/snort/rules:ro
+
+      # PCAP files to analyze (read-only)
+      - ./pcaps:/pcaps:ro
+      
+      # Output directory for alerts
+      - ./output:/output
+    
+    working_dir: /work
