@@ -35,10 +35,11 @@ fi
 
 # Build Docker image
 echo ""
-echo "[3/3] Building Docker image..."
-echo "This may take a while..."
+#echo "[3/3] Building Docker image..."
+echo "[3/3] Pulling Docker image..."
+#echo "This may take a while..."
 echo ""
-docker compose build
+docker compose pull
 
 # Verify installation
 echo ""
