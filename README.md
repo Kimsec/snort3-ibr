@@ -20,6 +20,22 @@ chmod +x setup.sh run_analysis.sh
 # 4. Run analysis
 ./run_analysis.sh
 ```
+## Build Locally (Optional)
+
+By default, the pre-built image from Docker Hub is used. To build locally instead, uncomment the `build` section in `compose.yml`:
+```yaml
+services:
+  snort:
+    image: snort3-ibr:3.10.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+```
+
+Then run:
+```bash
+docker compose build
+```
 
 ## Output
 generates `output/<timestamp>/summary.txt`:
