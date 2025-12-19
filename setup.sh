@@ -33,7 +33,7 @@ else
     echo "Download from: https://www.snort.org/downloads"
 fi
 
-# Build Docker image
+# Build/pull Docker image
 echo ""
 #echo "[3/3] Building Docker image..."
 echo "[3/3] Pulling Docker image..."
