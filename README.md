@@ -6,7 +6,10 @@
 **Institution:** Noroff University College  
 **Period:** 2025/26
 
+
+
 ## Quick Start
+> **_NOTE:_**  `You need root user privileges to run all the commands described below.`
 ```bash
 # 1. Add rules tarball (requires free registration)
 #    Download from: https://www.snort.org/downloads
