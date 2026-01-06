@@ -68,7 +68,6 @@ snort3-ibr/
 ├── setup.sh
 ├── run_analysis.sh
 ├── README.md
-├── BUILD_DOCUMENTATION.md
 ├── snortrules-snapshot-XXXXX.tar.gz   (add this)
 ├── rules/                             (extracted by setup.sh)
 ├── pcaps/                             (your PCAP files)
@@ -76,13 +75,13 @@ snort3-ibr/
 ```
 
 ## Versions
-- **Snort:** 3.10.0.0
-- **LibDAQ:** 3.0.23
 - **Base Image:** Ubuntu 22.04
+- **Snort:** 3.10.0.0
+- **Ruleset:** snortrules-snapshot-31470.tar.gz
+- **LibDAQ:** 3.0.23
+
 
 ## References
 - https://github.com/snort3/snort3
 - https://docs.snort.org/start/installation
 - https://www.snort.org/downloads
-
-See `BUILD_DOCUMENTATION.md` for complete build documentation.
