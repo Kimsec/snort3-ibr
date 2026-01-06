@@ -13,7 +13,7 @@
 > [!IMPORTANT]
 > You need root user privileges to run all the commands described below.
 ```bash
-# 1. Add rules tarball (requires free registration)
+# 1. Add rules tarball <snortrules-snapshot-31470.tar.gz> (requires free registration)
 #    Download from: https://www.snort.org/downloads
 
 # 2. Run setup
@@ -68,7 +68,7 @@ snort3-ibr/
 ├── setup.sh
 ├── run_analysis.sh
 ├── README.md
-├── snortrules-snapshot-XXXXX.tar.gz   (add this)
+├── snortrules-snapshot-31470.tar.gz   (add this)
 ├── rules/                             (extracted by setup.sh)
 ├── pcaps/                             (your PCAP files)
 └── output/                            (results)
