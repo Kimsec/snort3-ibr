@@ -76,7 +76,6 @@ COPY --from=builder /usr/local/lib/snort /usr/local/lib/snort
 COPY --from=builder /usr/local/lib/libdaq* /usr/local/lib/
 COPY --from=builder /usr/local/lib/daq /usr/local/lib/daq
 COPY --from=builder /usr/local/etc/snort /usr/local/etc/snort
-COPY --from=builder /usr/local/include/snort /usr/local/include/snort
 
 RUN ldconfig
 
