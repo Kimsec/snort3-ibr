@@ -6,14 +6,15 @@ mkdir -p "$OUTDIR"
 echo ""
 echo "Processing PCAPs, output will be in: $OUTDIR. This might take a while..."
 echo ""
+
 # Run Snort, convert to TSV on the fly
-docker compose run --rm snort bash -c '
+docker compose run --rm snort sh -c "
     snort -c /usr/local/etc/snort/snort.lua \
         -R /usr/local/etc/snort/rules/snort.rules \
         --pcap-dir /pcaps \
         -A alert_json \
-        --lua "alert_json = { fields = '\''sid msg class dst_port proto'\'' }" \
-        -q | jq -r "[.sid, .msg, .class, .dst_port, .proto] | @tsv"' > "$OUTDIR/alerts.tsv"
+        --lua \"alert_json = { fields = 'sid msg class dst_port proto' }\" \
+        -q | jq -r '[.sid, .msg, .class, .dst_port, .proto] | @tsv'" > "$OUTDIR/alerts.tsv"
 
 # Generate summary from TSV
 {
