@@ -11,7 +11,7 @@
 ## Quick Start
 
 > [!IMPORTANT]
-> You need root user privileges to run all the commands described below.
+> You might need root user privileges to run all the commands described below.
 ```bash
 # 1. Add rules tarball <snortrules-snapshot-31470.tar.gz> (requires free registration)
 #    Download from: https://www.snort.org/downloads
