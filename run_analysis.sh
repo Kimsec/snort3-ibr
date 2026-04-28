@@ -3,9 +3,8 @@ set -e
 
 OUTDIR="output/$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$OUTDIR"
-echo ""
+export TMPDIR="$OUTDIR"
 echo "Processing PCAPs, output will be in: $OUTDIR. This might take a while..."
-echo ""
 
 # Run Snort, convert to TSV on the fly
 docker compose run --rm snort sh -c "
