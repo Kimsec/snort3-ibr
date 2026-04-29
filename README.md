@@ -74,6 +74,14 @@ snort3-ibr/
 └── output/                            (results)
 ```
 
+## Data availability
+
+The complete alerts.tsv file (10.4 GB uncompressed, ~100 MB gzipped) is published on Zenodo:
+- DOI: 10.5281/zenodo.19880520
+- URL: https://doi.org/10.5281/zenodo.19880520
+
+A summary of the alert output ([summary.txt](artefacts/summary.txt)) is included in this repository.
+
 ## Versions
 - **Base Image:** Ubuntu 22.04
 - **Snort:** 3.10.0.0
