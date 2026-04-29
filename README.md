@@ -27,7 +27,7 @@ chmod +x setup.sh run_analysis.sh
 ```
 ## Build Locally (Optional)
 
-By default, the pre-built image from Docker Hub is used. To build locally instead, uncomment the `build` section in `compose.yml`:
+By default, the pre-built image from Docker Hub is used. To build locally instead, uncomment the `build` section in `docker-compose.yml`:
 ```yaml
 services:
   snort:
